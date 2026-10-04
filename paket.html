@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilih Paket Edukasi - EduTrip</title>
+  <meta name="description" content="Pilih paket wisata edukasi terbaik untuk individu, keluarga, dan rombongan sekolah di EduTrip.">
+
+  <!-- Google Fonts & Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Master CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Beranda EduTrip">
+        <div class="brand-icon-box">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          Edu<span>Trip</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Menu Utama">
+        <a href="index.html" class="nav-link">
+          <i class="fa-solid fa-house"></i>
+          <span>Beranda</span>
+        </a>
+        <a href="destinasi.html" class="nav-link">
+          <i class="fa-solid fa-compass"></i>
+          <span>Katalog</span>
+        </a>
+        <a href="paket.html" class="nav-link active">
+          <i class="fa-solid fa-ticket"></i>
+          <span>Paket Edukasi</span>
+        </a>
+        <a href="survey.html" class="nav-link">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <span>Survey</span>
+        </a>
+        <a href="profil.html" class="nav-link">
+          <i class="fa-regular fa-user"></i>
+          <span>Profil</span>
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="profil.html?tab=favorites" class="nav-action-btn" title="Destinasi Favorit Saya" aria-label="Favorit Saya">
+          <i class="fa-regular fa-heart"></i>
+          <span class="nav-badge-count">3</span>
+        </a>
+
+        <div id="nav-auth-desktop" class="nav-action-desktop" style="display: flex; align-items: center; gap: 0.5rem;">
+          <a href="login.html" class="btn btn-secondary btn-sm">Masuk</a>
+          <a href="register.html" class="btn btn-primary btn-sm">Daftar</a>
+        </div>
+
+        <button type="button" class="hamburger-btn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Menu -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Menu Mobile">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="brand-text">Edu<span>Trip</span></div>
+      </div>
+      <button type="button" class="drawer-close" aria-label="Tutup Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item"><a href="index.html"><i class="fa-solid fa-house"></i><span>Beranda</span></a></li>
+        <li class="drawer-nav-item"><a href="destinasi.html"><i class="fa-solid fa-compass"></i><span>Katalog Destinasi</span></a></li>
+        <li class="drawer-nav-item"><a href="paket.html" class="active"><i class="fa-solid fa-ticket"></i><span>Paket Edukasi</span></a></li>
+        <li class="drawer-nav-item"><a href="survey.html"><i class="fa-solid fa-square-poll-vertical"></i><span>Survey Pengunjung</span></a></li>
+        <li class="drawer-nav-item"><a href="profil.html"><i class="fa-regular fa-user"></i><span>Profil Pengguna</span></a></li>
+        <li class="drawer-nav-item"><a href="tentang.html"><i class="fa-solid fa-circle-info"></i><span>Bantuan & FAQ</span></a></li>
+      </ul>
+      <div id="nav-auth-drawer" class="drawer-auth-section">
+        <a href="login.html" class="btn btn-secondary btn-full">Masuk</a>
+        <a href="register.html" class="btn btn-primary btn-full">Daftar Akun Baru</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-content">
+
+    <section class="section-sm" style="background: var(--bg-surface); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <a href="destinasi.html" style="font-size: 0.88rem; color: var(--text-muted); display: inline-flex; align-items: center; gap: 0.4rem; margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-arrow-left"></i> Kembali ke Katalog
+            </a>
+            <h1 style="font-size: 2rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 0.25rem;">
+              Pilih Paket Edukasi
+            </h1>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">
+              Destinasi: <strong id="package-dest-name" style="color: var(--primary);">Saung Angklung Udjo</strong>
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span class="badge badge-green"><i class="fa-solid fa-shield-halved"></i> Garansi Resmi</span>
+            <span class="badge badge-gold"><i class="fa-solid fa-tag"></i> Diskon Rombongan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="section">
+      <div class="container">
+        <div class="packages-grid">
+
+          <!-- 1. Paket Individu -->
+          <div class="package-card">
+            <div class="package-header">
+              <span class="badge badge-green" style="margin-bottom: 0.5rem;">Tiket Reguler</span>
+              <h3 class="package-name">Paket Individu</h3>
+              <div class="package-price" data-package-price="individual">Rp75.000</div>
+              <span class="package-price-sub">/ orang (Umum & Siswa Mandiri)</span>
+            </div>
+
+            <div class="package-features-list">
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Akses masuk amfiteater seni bambu</span>
+              </div>
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Menyaksikan pertunjukan musik angklung massal</span>
+              </div>
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Audio guide pengenalan alat musik Sunda</span>
+              </div>
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Bebas berkeliling kebun bambu konservasi</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-outline btn-full" data-package-key="individual" data-package-name="Paket Individu" data-package-pax="1">
+              Pilih Paket Ini
+            </button>
+          </div>
+
+          <!-- 2. Paket Keluarga (Terlaris) -->
+          <div class="package-card highlight">
+            <span class="package-top-badge">TERLARIS</span>
+            <div class="package-header">
+              <span class="badge badge-gold" style="margin-bottom: 0.5rem;">Family Edukasi</span>
+              <h3 class="package-name">Paket Keluarga</h3>
+              <div class="package-price" data-package-price="family">Rp250.000</div>
+              <span class="package-price-sub">untuk 4 orang (Hemat Rp50.000)</span>
+            </div>
+
+            <div class="package-features-list">
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>4 tiket masuk amfiteater tempat duduk utama</span>
+              </div>
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Workshop interaktif membuat miniatur angklung</span>
+              </div>
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>2 suvenir bambu eksklusif untuk anak</span>
+              </div>
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Sesi foto khusus bersama para instruktur seni</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-full" data-package-key="family" data-package-name="Paket Keluarga" data-package-pax="4">
+              Pilih Paket Ini
+            </button>
+          </div>
+
+          <!-- 3. Paket Sekolah (Rombongan) -->
+          <div class="package-card">
+            <span class="package-top-badge" style="background: var(--primary);">REKOMENDASI SEKOLAH</span>
+            <div class="package-header">
+              <span class="badge badge-green" style="margin-bottom: 0.5rem;">Study Tour Resmi</span>
+              <h3 class="package-name">Paket Rombongan Sekolah</h3>
+              <div class="package-price" data-package-price="school">Rp500.000</div>
+              <span class="package-price-sub">Paket 15 - 20 Siswa + 2 Guru Gratis</span>
+            </div>
+
+            <div class="package-features-list">
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Pemandu khusus rombongan sekolah tersertifikasi</span>
+              </div>
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Lembar Kerja Siswa (LKS) selaras Kurikulum Merdeka</span>
+              </div>
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Workshop angklung interaktif bernada pentatonis</span>
+              </div>
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Sertifikat kegiatan kunjungan studi untuk tiap siswa</span>
+              </div>
+              <div class="package-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Area parkir bus sekolah khusus tanpa antre</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-dark btn-full" data-package-key="school" data-package-name="Paket Rombongan Sekolah" data-package-pax="20">
+              Pilih Paket Ini
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Custom Request Banner -->
+        <div style="background: var(--primary-light); border: 1px dashed var(--primary); border-radius: var(--radius-xl); padding: 2rem; margin-top: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+          <div>
+            <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 0.25rem;">
+              <i class="fa-solid fa-comments"></i> Rencana Kunjungan Khusus Lebih dari 50 Siswa?
+            </h4>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Dapatkan penawaran bus pariwisata terintegrasi, makan siang higienis, dan jadwal pemandu privat.
+            </p>
+          </div>
+          <a href="tentang.html" class="btn btn-primary">
+            <span>Hubungi Tim EduTrip</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal Booking Paket Edukasi -->
+  <div class="modal-overlay" id="package-order-modal" role="dialog" aria-modal="true" aria-labelledby="modal-package-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-package-title">
+          <i class="fa-solid fa-receipt" style="color: var(--primary);"></i>
+          Pemesanan Tiket Edukasi
+        </h3>
+        <button type="button" class="modal-close-btn" onclick="closePackageModal()" aria-label="Tutup Modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="package-order-form">
+        <div class="modal-body">
+          <div style="background: var(--primary-light); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem;">
+            <div style="font-size: 0.82rem; color: var(--primary-dark); font-weight: 700; text-transform: uppercase;">Paket Terpilih:</div>
+            <div style="font-size: 1.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.25rem;" id="modal-selected-package-name">-</div>
+            <div style="font-size: 1.25rem; font-weight: 800; color: var(--primary);" id="modal-selected-package-price">Rp 0</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pkg-visit-date">Tanggal Kunjungan *</label>
+            <div class="form-input-wrap">
+              <i class="fa-regular fa-calendar"></i>
+              <input type="date" id="pkg-visit-date" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pkg-buyer-name">Nama Pemesan / Guru *</label>
+            <div class="form-input-wrap">
+              <i class="fa-regular fa-user"></i>
+              <input type="text" id="pkg-buyer-name" placeholder="Misal: Budi Santoso" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pkg-buyer-school">Sekolah / Instansi</label>
+            <div class="form-input-wrap">
+              <i class="fa-solid fa-school"></i>
+              <input type="text" id="pkg-buyer-school" placeholder="Misal: SMA Negeri 1 Yogyakarta">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pkg-buyer-email">Email Konfirmasi E-Tiket *</label>
+            <div class="form-input-wrap">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="pkg-buyer-email" placeholder="nama@email.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pkg-buyer-phone">WhatsApp Aktif *</label>
+            <div class="form-input-wrap">
+              <i class="fa-brands fa-whatsapp"></i>
+              <input type="tel" id="pkg-buyer-phone" placeholder="081234567890" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closePackageModal()">Batal</button>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Konfirmasi & Cetak E-Tiket</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar (Sesuai Desain Figma) -->
+  <nav class="bottom-nav-bar" aria-label="Navigasi Bawah">
+    <a href="index.html" class="bottom-nav-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Beranda</span>
+    </a>
+    <a href="destinasi.html" class="bottom-nav-item">
+      <i class="fa-solid fa-compass"></i>
+      <span>Katalog</span>
+    </a>
+    <a href="paket.html" class="bottom-nav-item active">
+      <i class="fa-solid fa-ticket"></i>
+      <span>Paket</span>
+    </a>
+    <a href="survey.html" class="bottom-nav-item">
+      <i class="fa-solid fa-square-poll-vertical"></i>
+      <span>Survey</span>
+    </a>
+    <a href="profil.html" class="bottom-nav-item">
+      <i class="fa-regular fa-user"></i>
+      <span>Profil</span>
+    </a>
+  </nav>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #ffffff;">
+            <div class="brand-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="brand-text">Edu<span>Trip</span></div>
+          </a>
+          <p class="footer-desc">
+            EduTrip adalah portal direktori dan panduan wisata edukasi terpercaya di Indonesia. Menghadirkan informasi terlengkap tempat pembelajaran sains, cagar budaya, dan konservasi alam.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Jelajahi</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="destinasi.html">Katalog Destinasi</a></li>
+            <li><a href="paket.html">Paket Edukasi</a></li>
+            <li><a href="survey.html">Survey Kepuasan</a></li>
+            <li><a href="profil.html">Profil Saya</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kategori</h4>
+          <ul class="footer-links-list">
+            <li><a href="destinasi.html?category=Sains%20%26%20Teknologi">Sains & IPTEK</a></li>
+            <li><a href="destinasi.html?category=Sejarah%20%26%20Budaya">Sejarah Nusantara</a></li>
+            <li><a href="destinasi.html?category=Alam%20%26%20Satwa">Alam & Satwa</a></li>
+            <li><a href="destinasi.html?category=Seni%20%26%20Budaya">Seni Tradisional</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontak Kami</h4>
+          <div style="font-size: 0.9rem; line-height: 1.8;">
+            <div><i class="fa-solid fa-envelope" style="margin-right: 6px;"></i> info@edutrip.id</div>
+            <div><i class="fa-solid fa-phone" style="margin-right: 6px;"></i> (021) 789-2231</div>
+            <div><i class="fa-solid fa-location-dot" style="margin-right: 6px;"></i> Jakarta & Bandung, Indonesia</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 EduTrip Indonesia. Hak cipta dilindungi.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="tentang.html" style="color: #95D5B2;">Privasi</a>
+          <a href="tentang.html" style="color: #95D5B2;">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    const saungUdjo = EDUTRIP_DATA.find(destination => destination.id === 5);
+    const saungPackagePrices = saungUdjo.packagePrices;
+
+    document.querySelectorAll('[data-package-price]').forEach(priceElement => {
+      const packageKey = priceElement.dataset.packagePrice;
+      priceElement.textContent = formatRupiah(saungPackagePrices[packageKey]);
+    });
+
+    let currentSelectedPkg = { name: '', price: 0, pax: 1 };
+
+    function openBookingModal(pkgName, price, pax) {
+      currentSelectedPkg = { name: pkgName, price: price, pax: pax };
+      document.getElementById('modal-selected-package-name').textContent = pkgName;
+      document.getElementById('modal-selected-package-price').textContent = formatRupiah(price);
+
+      const dateInput = document.getElementById('pkg-visit-date');
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      dateInput.value = tomorrow.toISOString().split('T')[0];
+      dateInput.min = new Date().toISOString().split('T')[0];
+
+      const user = window.EduTripAuth.getUser();
+      if (user) {
+        document.getElementById('pkg-buyer-name').value = user.name;
+        document.getElementById('pkg-buyer-school').value = user.school || '';
+        document.getElementById('pkg-buyer-email').value = user.email;
+        document.getElementById('pkg-buyer-phone').value = user.phone || '';
+      }
+
+      document.getElementById('package-order-modal').classList.add('active');
+    }
+
+    document.querySelectorAll('[data-package-key]').forEach(button => {
+      button.addEventListener('click', () => {
+        const packageKey = button.dataset.packageKey;
+        openBookingModal(button.dataset.packageName, saungPackagePrices[packageKey], Number(button.dataset.packagePax));
+      });
+    });
+
+    function closePackageModal() {
+      document.getElementById('package-order-modal').classList.remove('active');
+    }
+
+    document.getElementById('package-order-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const booking = {
+        id: 'EDT-' + Math.floor(100000 + Math.random() * 900000),
+        destId: 5,
+        destName: 'Saung Angklung Udjo',
+        destLocation: 'Bandung',
+        packageName: currentSelectedPkg.name,
+        visitDate: document.getElementById('pkg-visit-date').value,
+        students: currentSelectedPkg.pax,
+        teachers: 2,
+        totalAmount: currentSelectedPkg.price,
+        buyerName: document.getElementById('pkg-buyer-name').value,
+        buyerSchool: document.getElementById('pkg-buyer-school').value,
+        status: 'Terkonfirmasi (Lunas)',
+        createdAt: 'Hari Ini'
+      };
+
+      const bookings = JSON.parse(localStorage.getItem('edutrip_bookings') || '[]');
+      bookings.unshift(booking);
+      localStorage.setItem('edutrip_bookings', JSON.stringify(bookings));
+
+      closePackageModal();
+      window.EduTripToast.show("Pesanan Diterima!", `Kode Tiket: ${booking.id}. Tiket telah disimpan di Profil Anda.`, "success");
+
+      setTimeout(() => {
+        window.location.href = 'profil.html?tab=history';
+      }, 1200);
+    });
+  </script>
+</body>
+</html>

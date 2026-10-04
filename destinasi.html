@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Destinasi Wisata Edukasi - EduTrip</title>
+  <meta name="description" content="Jelajahi dan filter destinasi wisata edukasi terbaik di Indonesia berdasarkan kategori sains, sejarah, alam, dan seni.">
+
+  <!-- Google Fonts & Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Master CSS Sesuai Figma -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Beranda EduTrip">
+        <div class="brand-icon-box">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          Edu<span>Trip</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Menu Utama">
+        <a href="index.html" class="nav-link">
+          <i class="fa-solid fa-house"></i>
+          <span>Beranda</span>
+        </a>
+        <a href="destinasi.html" class="nav-link active">
+          <i class="fa-solid fa-compass"></i>
+          <span>Katalog</span>
+        </a>
+        <a href="paket.html" class="nav-link">
+          <i class="fa-solid fa-ticket"></i>
+          <span>Paket Edukasi</span>
+        </a>
+        <a href="survey.html" class="nav-link">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <span>Survey</span>
+        </a>
+        <a href="profil.html" class="nav-link">
+          <i class="fa-regular fa-user"></i>
+          <span>Profil</span>
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="profil.html?tab=favorites" class="nav-action-btn" title="Destinasi Favorit Saya" aria-label="Favorit Saya">
+          <i class="fa-regular fa-heart"></i>
+          <span class="nav-badge-count">3</span>
+        </a>
+
+        <div id="nav-auth-desktop" class="nav-action-desktop" style="display: flex; align-items: center; gap: 0.5rem;">
+          <a href="login.html" class="btn btn-secondary btn-sm">Masuk</a>
+          <a href="register.html" class="btn btn-primary btn-sm">Daftar</a>
+        </div>
+
+        <button type="button" class="hamburger-btn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Menu -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Menu Mobile">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="brand-text">Edu<span>Trip</span></div>
+      </div>
+      <button type="button" class="drawer-close" aria-label="Tutup Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item"><a href="index.html"><i class="fa-solid fa-house"></i><span>Beranda</span></a></li>
+        <li class="drawer-nav-item"><a href="destinasi.html" class="active"><i class="fa-solid fa-compass"></i><span>Katalog Destinasi</span></a></li>
+        <li class="drawer-nav-item"><a href="paket.html"><i class="fa-solid fa-ticket"></i><span>Paket Edukasi</span></a></li>
+        <li class="drawer-nav-item"><a href="survey.html"><i class="fa-solid fa-square-poll-vertical"></i><span>Survey Pengunjung</span></a></li>
+        <li class="drawer-nav-item"><a href="profil.html"><i class="fa-regular fa-user"></i><span>Profil Pengguna</span></a></li>
+        <li class="drawer-nav-item"><a href="tentang.html"><i class="fa-solid fa-circle-info"></i><span>Bantuan & FAQ</span></a></li>
+      </ul>
+      <div id="nav-auth-drawer" class="drawer-auth-section">
+        <a href="login.html" class="btn btn-secondary btn-full">Masuk</a>
+        <a href="register.html" class="btn btn-primary btn-full">Daftar Akun Baru</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-content">
+
+    <!-- Katalog Header Sesuai Desain Figma -->
+    <section class="section-sm" style="background: var(--bg-surface); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: 1.5rem;">
+          <span class="hero-pill-badge">
+            <i class="fa-solid fa-compass"></i> Katalog Wisata Edukasi
+          </span>
+          <h1 style="font-size: 2.25rem; font-weight: 800; color: var(--primary-dark); line-height: 1.25; margin-bottom: 0.5rem;">
+            Jelajahi Destinasi Edukasi
+          </h1>
+          <p style="font-size: 1rem; color: var(--text-muted);">
+            Temukan tempat belajar terbaik di seluruh nusantara yang selaras dengan Kurikulum Merdeka.
+          </p>
+        </div>
+
+        <!-- Search Bar with Live Input -->
+        <div class="search-bar-figma" style="max-width: 650px; margin-bottom: 1.5rem;">
+          <i class="fa-solid fa-magnifying-glass" style="color: var(--primary); font-size: 1.1rem;"></i>
+          <input type="text" id="destinasi-search" placeholder="Cari nama museum, kota, atau materi belajar..." autocomplete="off">
+          <button type="button" class="btn btn-primary btn-sm" id="btn-search-trigger" style="border-radius: var(--radius-md);">
+            <span>Cari</span>
+          </button>
+        </div>
+
+        <!-- Category Pills (Horizontal Scrollable) -->
+        <div class="category-filter-wrap" id="category-pills">
+          <!-- Diisi otomatis oleh js/destinasi.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Catalog Grid Section -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Controls Bar -->
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+          <div style="font-size: 0.95rem; color: var(--text-muted); font-weight: 600;">
+            Menampilkan <span id="result-count" style="color: var(--primary); font-weight: 800;">12</span> destinasi edukasi
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <label for="sort-destinasi" style="font-size: 0.88rem; font-weight: 700; color: var(--text-main);">Urutkan:</label>
+            <select id="sort-destinasi" style="padding: 0.45rem 0.85rem; border-radius: var(--radius-sm); border: 1.5px solid var(--border-color); background: var(--bg-surface); font-weight: 600; outline: none;">
+              <option value="popular">Paling Populer</option>
+              <option value="rating-desc">Rating Tertinggi</option>
+              <option value="price-asc">Harga: Termurah</option>
+              <option value="price-desc">Harga: Tertinggi</option>
+              <option value="name-asc">Nama: A - Z</option>
+            </select>
+            <button type="button" class="btn btn-secondary btn-sm" id="reset-filters-btn" title="Reset Filter">
+              <i class="fa-solid fa-rotate-left"></i>
+              <span>Reset</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hidden Radio Inputs for dest script compatibility -->
+        <div style="display: none;">
+          <input type="radio" name="filter-category" value="all" checked>
+          <input type="radio" name="filter-price" value="all" checked>
+          <input type="radio" name="filter-rating" value="all" checked>
+        </div>
+
+        <!-- Destination Cards Grid -->
+        <div class="destination-grid" id="destinasi-grid">
+          <!-- Diisi otomatis oleh js/destinasi.js -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mobile Bottom Navigation Bar (Sesuai Desain Figma) -->
+  <nav class="bottom-nav-bar" aria-label="Navigasi Bawah">
+    <a href="index.html" class="bottom-nav-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Beranda</span>
+    </a>
+    <a href="destinasi.html" class="bottom-nav-item active">
+      <i class="fa-solid fa-compass"></i>
+      <span>Katalog</span>
+    </a>
+    <a href="paket.html" class="bottom-nav-item">
+      <i class="fa-solid fa-ticket"></i>
+      <span>Paket</span>
+    </a>
+    <a href="survey.html" class="bottom-nav-item">
+      <i class="fa-solid fa-square-poll-vertical"></i>
+      <span>Survey</span>
+    </a>
+    <a href="profil.html" class="bottom-nav-item">
+      <i class="fa-regular fa-user"></i>
+      <span>Profil</span>
+    </a>
+  </nav>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #ffffff;">
+            <div class="brand-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="brand-text">Edu<span>Trip</span></div>
+          </a>
+          <p class="footer-desc">
+            EduTrip Nusantara adalah portal direktori dan panduan wisata edukasi terpercaya di Indonesia. Menghubungkan kurikulum sekolah dengan objek pembelajaran riil di alam dan cagar budaya.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Menu Navigasi</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="destinasi.html">Katalog Destinasi</a></li>
+            <li><a href="paket.html">Paket Edukasi</a></li>
+            <li><a href="survey.html">Survey Kepuasan</a></li>
+            <li><a href="profil.html">Profil Pengguna</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kategori</h4>
+          <ul class="footer-links-list">
+            <li><a href="destinasi.html?category=Sains%20%26%20Teknologi">Sains & IPTEK</a></li>
+            <li><a href="destinasi.html?category=Sejarah%20%26%20Budaya">Sejarah Nusantara</a></li>
+            <li><a href="destinasi.html?category=Alam%20%26%20Satwa">Alam & Satwa</a></li>
+            <li><a href="destinasi.html?category=Seni%20%26%20Budaya">Seni Budaya</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontak Kami</h4>
+          <div style="font-size: 0.9rem; line-height: 1.8;">
+            <div><i class="fa-solid fa-envelope" style="margin-right: 6px;"></i> halo@edutrip.id</div>
+            <div><i class="fa-solid fa-phone" style="margin-right: 6px;"></i> (021) 789-2231</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 EduTrip Nusantara. Seluruh hak cipta dilindungi.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="tentang.html" style="color: #95D5B2;">Kebijakan Privasi</a>
+          <a href="tentang.html" style="color: #95D5B2;">Bantuan & FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/destinasi.js"></script>
+</body>
+</html>
