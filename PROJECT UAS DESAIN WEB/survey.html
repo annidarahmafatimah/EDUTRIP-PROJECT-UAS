@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Kepuasan Pelanggan - EduTrip</title>
+  <meta name="description" content="Formulir evaluasi kepuasan dan kualitas materi edukasi wisata EduTrip untuk peningkatan standar kunjungan sekolah.">
+
+  <!-- Google Fonts & Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Master CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Beranda EduTrip">
+        <div class="brand-icon-box">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          Edu<span>Trip</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Menu Utama">
+        <a href="index.html" class="nav-link">
+          <i class="fa-solid fa-house"></i>
+          <span>Beranda</span>
+        </a>
+        <a href="destinasi.html" class="nav-link">
+          <i class="fa-solid fa-compass"></i>
+          <span>Katalog</span>
+        </a>
+        <a href="paket.html" class="nav-link">
+          <i class="fa-solid fa-ticket"></i>
+          <span>Paket Edukasi</span>
+        </a>
+        <a href="survey.html" class="nav-link active">
+          <i class="fa-solid fa-square-poll-vertical"></i>
+          <span>Survey</span>
+        </a>
+        <a href="profil.html" class="nav-link">
+          <i class="fa-regular fa-user"></i>
+          <span>Profil</span>
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="profil.html?tab=favorites" class="nav-action-btn" title="Destinasi Favorit Saya" aria-label="Favorit Saya">
+          <i class="fa-regular fa-heart"></i>
+          <span class="nav-badge-count">3</span>
+        </a>
+
+        <div id="nav-auth-desktop" class="nav-action-desktop" style="display: flex; align-items: center; gap: 0.5rem;">
+          <a href="login.html" class="btn btn-secondary btn-sm">Masuk</a>
+          <a href="register.html" class="btn btn-primary btn-sm">Daftar</a>
+        </div>
+
+        <button type="button" class="hamburger-btn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Menu -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Menu Mobile">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="brand-text">Edu<span>Trip</span></div>
+      </div>
+      <button type="button" class="drawer-close" aria-label="Tutup Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item"><a href="index.html"><i class="fa-solid fa-house"></i><span>Beranda</span></a></li>
+        <li class="drawer-nav-item"><a href="destinasi.html"><i class="fa-solid fa-compass"></i><span>Katalog Destinasi</span></a></li>
+        <li class="drawer-nav-item"><a href="paket.html"><i class="fa-solid fa-ticket"></i><span>Paket Edukasi</span></a></li>
+        <li class="drawer-nav-item"><a href="survey.html" class="active"><i class="fa-solid fa-square-poll-vertical"></i><span>Survey Pengunjung</span></a></li>
+        <li class="drawer-nav-item"><a href="profil.html"><i class="fa-regular fa-user"></i><span>Profil Pengguna</span></a></li>
+        <li class="drawer-nav-item"><a href="tentang.html"><i class="fa-solid fa-circle-info"></i><span>Bantuan & FAQ</span></a></li>
+      </ul>
+      <div id="nav-auth-drawer" class="drawer-auth-section">
+        <a href="login.html" class="btn btn-secondary btn-full">Masuk</a>
+        <a href="register.html" class="btn btn-primary btn-full">Daftar Akun Baru</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-content">
+    <section class="section">
+      <div class="container">
+        
+        <div class="survey-card">
+          <!-- Survey Header Banner Sesuai Figma -->
+          <div class="survey-header-box">
+            <span class="badge badge-green" style="margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-clipboard-check"></i> Evaluasi Kunjungan Edukasi
+            </span>
+            <h1 style="font-size: 1.85rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 0.35rem;">
+              Survey Kepuasan Pelanggan
+            </h1>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Umpan balik Anda sangat berarti bagi kami dan kurator destinasi untuk terus meningkatkan kualitas sarana edukasi siswa.
+            </p>
+            <div style="margin-top: 1rem; display: flex; align-items: center; gap: 0.75rem; background: #ffffff; padding: 0.65rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <i class="fa-solid fa-coins" style="color: var(--accent-gold); font-size: 1.25rem;"></i>
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-main);">
+                Dapatkan +50 Poin Koin EduTrip setelah mengisi survey ini!
+              </span>
+            </div>
+          </div>
+
+          <!-- Survey Form -->
+          <form id="edutrip-survey-form">
+
+            <!-- Pilih Destinasi Kunjungan -->
+            <div class="survey-q-group">
+              <label class="survey-q-title" for="survey-dest-select">
+                Destinasi yang Anda Kunjungi:
+              </label>
+              <div class="form-input-wrap">
+                <i class="fa-solid fa-landmark"></i>
+                <select id="survey-dest-select" style="font-weight: 600;">
+                  <option value="Saung Angklung Udjo">Saung Angklung Udjo (Bandung)</option>
+                  <option value="Museum Geologi Bandung">Museum Geologi Bandung</option>
+                  <option value="Taman Pintar Yogyakarta">Taman Pintar Yogyakarta</option>
+                  <option value="Kebun Raya Bogor">Kebun Raya Bogor & Museum Zoologi</option>
+                  <option value="Candi Borobudur">Candi Borobudur (Magelang)</option>
+                  <option value="Museum Nasional Indonesia">Museum Nasional Indonesia (Jakarta)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Pertanyaan 1: Peran Pengunjung -->
+            <div class="survey-q-group">
+              <div class="survey-q-title">
+                1. Sebagai apa Anda datang mengunjungi destinasi ini? *
+              </div>
+              <div class="survey-options-list">
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_role" value="Guru / Pembina Sekolah" checked>
+                  <span>Guru / Pembina Rombongan Sekolah</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_role" value="Siswa / Pelajar">
+                  <span>Siswa / Mahasiswa Peserta Study Tour</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_role" value="Orang Tua Wali">
+                  <span>Orang Tua Wali / Pendamping Keluarga</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_role" value="Pengunjung Umum">
+                  <span>Pengunjung Umum / Peneliti</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Pertanyaan 2: Manfaat Edukatif -->
+            <div class="survey-q-group">
+              <div class="survey-q-title">
+                2. Seberapa informatif kegiatan peragaan sains/budaya di tempat ini? *
+              </div>
+              <div class="survey-options-list">
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_informative" value="Sangat Bermanfaat" checked>
+                  <span>Sangat Bermanfaat - Siswa memahami materi jauh lebih cepat</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_informative" value="Bermanfaat">
+                  <span>Bermanfaat - Menambah wawasan baru</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_informative" value="Cukup">
+                  <span>Cukup - Kurang lebih sama dengan teori buku</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_informative" value="Kurang">
+                  <span>Kurang Bermanfaat - Alat peraga minim penjelasan</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Pertanyaan 3: Pelayanan Staf -->
+            <div class="survey-q-group">
+              <div class="survey-q-title">
+                3. Bagaimana keramahan pelayanan staf dan pemandu edukasi? *
+              </div>
+              <div class="survey-options-list">
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_staff" value="Sangat Ramah" checked>
+                  <span>Sangat Ramah, Sigap, dan Pintar Berinteraksi dengan Anak</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_staff" value="Ramah">
+                  <span>Ramah dan Menjelaskan dengan Baik</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_staff" value="Cukup">
+                  <span>Cukup Baik</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_staff" value="Kurang">
+                  <span>Perlu Peningkatan Keramahan & Kecepatan Layanan</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Pertanyaan 4: Relevansi Kurikulum -->
+            <div class="survey-q-group">
+              <div class="survey-q-title">
+                4. Seberapa relevan materi destinasi dengan kurikulum belajar Anda? *
+              </div>
+              <div class="survey-options-list">
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_curriculum" value="Sangat Relevan" checked>
+                  <span>Sangat Relevan dengan Capaian Kurikulum Merdeka</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_curriculum" value="Relevan">
+                  <span>Relevan sebagai Pengayaan Tambahan</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="radio" name="q_curriculum" value="Kurang Relevan">
+                  <span>Kurang Terhubung dengan Topik Pelajaran</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Pertanyaan 5: Rating Bintang Interaktif -->
+            <div class="survey-q-group">
+              <div class="survey-q-title">
+                5. Bagaimana kepuasan Anda secara keseluruhan? *
+              </div>
+              <div class="star-rating-box" id="survey-stars">
+                <i class="fa-solid fa-star selected" data-star="1"></i>
+                <i class="fa-solid fa-star selected" data-star="2"></i>
+                <i class="fa-solid fa-star selected" data-star="3"></i>
+                <i class="fa-solid fa-star selected" data-star="4"></i>
+                <i class="fa-solid fa-star selected" data-star="5"></i>
+                <span id="star-score-text" style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-left: 10px;">5 / 5 (Sangat Puas)</span>
+              </div>
+              <input type="hidden" id="survey-rating-val" value="5">
+            </div>
+
+            <!-- Pertanyaan 6: Fasilitas -->
+            <div class="survey-q-group">
+              <div class="survey-q-title">
+                6. Fasilitas apa saja yang menurut Anda sudah memuaskan? (Bisa pilih lebih dari satu)
+              </div>
+              <div class="survey-options-list">
+                <label class="survey-radio-label">
+                  <input type="checkbox" name="fac_eval" value="Toilet Bersih" checked>
+                  <span>Kebersihan toilet dan musholla terawat</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="checkbox" name="fac_eval" value="Parkir Bus" checked>
+                  <span>Area parkir bus pariwisata luas dan teratur</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="checkbox" name="fac_eval" value="Papan Info Jelas" checked>
+                  <span>Papan informasi & barcode penjelas berfungsi baik</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="checkbox" name="fac_eval" value="Akses Difabel">
+                  <span>Jalur kursi roda / difabel ramah pengunjung</span>
+                </label>
+                <label class="survey-radio-label">
+                  <input type="checkbox" name="fac_eval" value="Kantin Higienis">
+                  <span>Kantin dan food court higienis dengan harga terjangkau</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Pertanyaan 7: Saran Perbaikan -->
+            <div class="survey-q-group" style="border-bottom: none;">
+              <label class="survey-q-title" for="survey-feedback">
+                7. Catatan, kesan, atau saran perbaikan untuk pengelola:
+              </label>
+              <div class="form-input-wrap" style="padding: 0.75rem 1rem;">
+                <textarea id="survey-feedback" rows="4" placeholder="Tuliskan pengalaman berkesan Anda atau hal yang perlu ditingkatkan..."></textarea>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-full btn-lg">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Kirim Survey & Klaim +50 Koin</span>
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Terima Kasih Survey -->
+  <div class="modal-overlay" id="survey-success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-survey-thanks">
+    <div class="modal-content" style="text-align: center; max-width: 480px;">
+      <div class="modal-body" style="padding: 2.5rem 2rem;">
+        <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin: 0 auto 1.25rem;">
+          <i class="fa-solid fa-award"></i>
+        </div>
+        <h3 id="modal-survey-thanks" style="font-size: 1.5rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 0.5rem;">
+          Terima Kasih Atas Ulasan Anda!
+        </h3>
+        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+          Jawaban Anda telah tersimpan dan poin penghargaan sebesar <strong>+50 Koin EduTrip</strong> telah ditambahkan ke profil Anda.
+        </p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center;">
+          <a href="profil.html" class="btn btn-primary">
+            <i class="fa-regular fa-user"></i>
+            <span>Cek Poin di Profil</span>
+          </a>
+          <a href="destinasi.html" class="btn btn-secondary">
+            <span>Katalog Destinasi</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar (Sesuai Desain Figma) -->
+  <nav class="bottom-nav-bar" aria-label="Navigasi Bawah">
+    <a href="index.html" class="bottom-nav-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Beranda</span>
+    </a>
+    <a href="destinasi.html" class="bottom-nav-item">
+      <i class="fa-solid fa-compass"></i>
+      <span>Katalog</span>
+    </a>
+    <a href="paket.html" class="bottom-nav-item">
+      <i class="fa-solid fa-ticket"></i>
+      <span>Paket</span>
+    </a>
+    <a href="survey.html" class="bottom-nav-item active">
+      <i class="fa-solid fa-square-poll-vertical"></i>
+      <span>Survey</span>
+    </a>
+    <a href="profil.html" class="bottom-nav-item">
+      <i class="fa-regular fa-user"></i>
+      <span>Profil</span>
+    </a>
+  </nav>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>&copy; 2026 EduTrip Indonesia. Hak cipta dilindungi.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="tentang.html" style="color: #95D5B2;">Kebijakan Privasi</a>
+          <a href="tentang.html" style="color: #95D5B2;">Bantuan & FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Interactive Star Rating Logic
+    const stars = document.querySelectorAll('#survey-stars i');
+    const ratingInput = document.getElementById('survey-rating-val');
+    const scoreText = document.getElementById('star-score-text');
+
+    const scoreLabels = {
+      1: "1 / 5 (Kurang)",
+      2: "2 / 5 (Cukup)",
+      3: "3 / 5 (Baik)",
+      4: "4 / 5 (Sangat Baik)",
+      5: "5 / 5 (Sangat Puas)"
+    };
+
+    stars.forEach(star => {
+      star.addEventListener('click', function() {
+        const val = parseInt(this.dataset.star, 10);
+        ratingInput.value = val;
+        scoreText.textContent = scoreLabels[val];
+
+        stars.forEach(s => {
+          const sVal = parseInt(s.dataset.star, 10);
+          if (sVal <= val) {
+            s.classList.add('selected');
+          } else {
+            s.classList.remove('selected');
+          }
+        });
+      });
+    });
+
+    // Form Submit
+    document.getElementById('edutrip-survey-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Tambahkan 50 koin ke user di localStorage
+      let user = window.EduTripAuth.getUser();
+      if (!user) {
+        user = window.EduTripAuth.loginDemo();
+      }
+      user.coins = (user.coins || 150) + 50;
+      window.EduTripAuth.setUser(user);
+
+      // Simpan data survey ke localStorage
+      const surveys = JSON.parse(localStorage.getItem('edutrip_surveys') || '[]');
+      surveys.push({
+        dest: document.getElementById('survey-dest-select').value,
+        rating: ratingInput.value,
+        feedback: document.getElementById('survey-feedback').value,
+        date: new Date().toLocaleDateString('id-ID')
+      });
+      localStorage.setItem('edutrip_surveys', JSON.stringify(surveys));
+
+      // Tampilkan Modal Terima Kasih
+      document.getElementById('survey-success-modal').classList.add('active');
+      window.EduTripToast.show("Survey Terkirim!", "+50 Poin Koin EduTrip berhasil diklaim.", "success");
+    });
+  </script>
+</body>
+</html>
